@@ -1,0 +1,48 @@
+{
+  "name": "npm-module-base",
+  "version": "1.0.0",
+  "description": "Base project for building npm module with Typescript",
+  "main": "lib/index.js",
+  "scripts": {
+    "dev": "ts-node src/index.ts",
+    "build": "rm -rf lib && tsc",
+    "prepublishOnly": "yarn build",
+    "watch": "yarn build --watch",
+    "test": "jest --runInBand --forceExit --passWithNoTests --verbose --useStderr"
+  },
+  "bin": {
+    "npm-module-base": "lib/index.js"
+  },
+  "author": "Ikenna Agbasimalo <michfx@gmail.com>",
+  "license": "ISC",
+  "dependencies": {
+    "@types/node": "^14.14.32"
+  },
+  "devDependencies": {
+    "@types/jest": "^26.0.20",
+    "jest": "^26.6.3",
+    "nodemon": "^2.0.7",
+    "prettier": "^2.2.1",
+    "ts-jest": "^26.5.2",
+    "ts-node": "^9.1.1"
+  },
+  "keywords": [],
+  "bugs": {
+    "email": "michfx@gmail.com",
+    "url": "https://github.com/ikmich/npm-module-base-ts/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ikmich/npm-module-base-ts"
+  },
+  "maintainers": [
+    "Ikenna Agbasimalo <michfx@gmail.com>"
+  ],
+  "prettier": {
+    "printWidth": 120,
+    "semi": true,
+    "trailingComma": "none",
+    "singleQuote": true,
+    "tabWidth": 2
+  }
+}
