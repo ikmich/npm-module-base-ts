@@ -6,8 +6,8 @@
   "scripts": {
     "dev": "ts-node src/index.ts",
     "build": "rm -rf lib && tsc",
-    "prepublishOnly": "yarn build",
-    "watch": "yarn build --watch",
+    "prepublishOnly": "npm run build",
+    "watch": "npm run build --watch",
     "test": "jest --runInBand --forceExit --passWithNoTests --verbose --useStderr"
   },
   "bin": {
