@@ -1,7 +1,5 @@
-function moduleBase () {
+function moduleBase() {
   console.log('npm-module-base-ts');
 }
 
-module.exports = {
-  moduleBase
-}
+export { moduleBase };

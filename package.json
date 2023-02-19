@@ -2,19 +2,20 @@
   "name": "npm-module-base",
   "version": "1.0.0",
   "description": "Base project for building npm module with Typescript",
-  "main": "lib/index.js",
+  "main": "dist/index.js",
   "scripts": {
-    "dev": "ts-node src/index.ts",
+    "start:dev": "ts-node src/index.ts",
     "build": "rm -rf lib && tsc",
     "prepublishOnly": "npm run build",
     "watch": "npm run build --watch",
     "test": "jest --runInBand --forceExit --passWithNoTests --verbose --useStderr"
   },
   "bin": {
-    "npm-module-base": "lib/index.js"
+    "npm-module-base": "dist/cli/index.js"
   },
   "author": "Ikenna Agbasimalo <michfx@gmail.com>",
   "license": "ISC",
+  "files": ["dist", "package.json", "README.md"],
   "dependencies": {
     "@types/node": "^14.14.32"
   },
@@ -29,11 +30,11 @@
   "keywords": [],
   "bugs": {
     "email": "michfx@gmail.com",
-    "url": "https://github.com/ikmich/npm-module-base-ts/issues"
+    "url": "https://github.com/ikmich/defapi-client/issues"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/ikmich/npm-module-base-ts"
+    "url": "https://github.com/ikmich/defapi-client"
   },
   "maintainers": [
     "Ikenna Agbasimalo <michfx@gmail.com>"
